@@ -80,71 +80,72 @@ class ScheduleListView extends React.Component {
   render() {
     return (
       <PureListView
+
         ref={this.storeInnerRef}
         data={this.state.todaySessions}
         renderRow={this.renderRow}
         renderSectionHeader={this.renderSectionHeader}
         {...(this.props: any) /* flow can't guarantee the shape of props */}
-        renderEmptyList={this.renderEmptyList}
-      />
+  renderEmptyList = { this.renderEmptyList }
+    />
     );
-  }
-
-  renderSectionHeader(sectionData: any, sectionID: string) {
-    let formatted =
-      sectionID
-        .toLowerCase()
-        .replace("am", "")
-        .replace("pm", "") || sectionID;
-    return <SessionsSectionHeader title={formatted} />;
-  }
-
-  renderRow(session: Session, day: number) {
-    return (
-      <F8SessionCell
-        onPress={_ => this.openSession(session, day)}
-        session={session}
-        firstRow={this.isFirstSessionCell(session.id)}
-      />
-    );
-  }
-
-  renderEmptyList(containerHeight: number): ?ReactElement {
-    // if listview onLayout hasn't updated container height, don't bother
-    if (containerHeight === 0) {
-      return null;
-    } // TODO: different fix
-    // otherwise render fallback cta with a valid and centerable height
-    const { renderEmptyList } = this.props;
-    return renderEmptyList && renderEmptyList(this.props.day, containerHeight);
-  }
-
-  openSession(session: Session, day: number) {
-    let allSessions = { ...this.state.todaySessions };
-    this.props.navigator.push({
-      day,
-      session,
-      allSessions
-    });
-  }
-
-  storeInnerRef(ref: ?PureListView) {
-    this._innerRef = ref;
-  }
-
-  scrollTo(...args: Array<any>) {
-    this._innerRef && this._innerRef.scrollTo(...args);
-  }
-
-  getScrollResponder(): any {
-    return this._innerRef && this._innerRef.getScrollResponder();
-  }
-
-  isFirstSessionCell(id) {
-    const keys = Object.keys(this.state.todaySessions);
-    const innerKeys = Object.keys(this.state.todaySessions[keys[0]]);
-    return id === innerKeys[0];
-  }
 }
 
-module.exports = ScheduleListView;
+renderSectionHeader(sectionData: any, sectionID: string) {
+  let formatted =
+    sectionID
+      .toLowerCase()
+      .replace("am", "")
+      .replace("pm", "") || sectionID;
+  return <SessionsSectionHeader title={formatted} />;
+}
+
+renderRow(session: Session, day: number) {
+  return (
+    <F8SessionCell
+      onPress={_ => this.openSession(session, day)}
+      session={session}
+      firstRow={this.isFirstSessionCell(session.id)}
+    />
+  );
+}
+
+renderEmptyList(containerHeight: number): ?ReactElement {
+  // if listview onLayout hasn't updated container height, don't bother
+  if (containerHeight === 0) {
+    return null;
+  } // TODO: different fix
+  // otherwise render fallback cta with a valid and centerable height
+  const { renderEmptyList } = this.props;
+  return renderEmptyList && renderEmptyList(this.props.day, containerHeight);
+}
+
+openSession(session: Session, day: number) {
+  let allSessions = { ...this.state.todaySessions };
+  this.props.navigator.push({
+    day,
+    session,
+    allSessions
+  });
+}
+
+storeInnerRef(ref: ?PureListView) {
+  this._innerRef = ref;
+}
+
+scrollTo(...args: Array<any>) {
+  this._innerRef && this._innerRef.scrollTo(...args);
+}
+
+  getScrollResponder(): any {
+  return this._innerRef && this._innerRef.getScrollResponder();
+}
+
+  isFirstSessionCell(id) {
+  const keys = Object.keys(this.state.todaySessions);
+  const innerKeys = Object.keys(this.state.todaySessions[keys[0]]);
+  return id === innerKeys[0];
+}
+}
+
+  module.exports = ScheduleListView;

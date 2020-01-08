@@ -51,7 +51,7 @@ class F8App extends React.Component {
     AppState.addEventListener("change", this.handleAppStateChange);
 
     // TODO: Make this list smaller, we basically download the whole internet
-    // this.props.dispatch(loadSessions());
+    this.props.dispatch(loadSessions());
     this.props.dispatch(loadConfig());
     // this.props.dispatch(loadNotifications());
     this.props.dispatch(loadVideos());
@@ -75,7 +75,7 @@ class F8App extends React.Component {
 
   handleAppStateChange = appState => {
     if (appState === "active") {
-      // this.props.dispatch(loadSessions());
+      this.props.dispatch(loadSessions());
       this.props.dispatch(loadVideos());
       // this.props.dispatch(loadNotifications());
 
