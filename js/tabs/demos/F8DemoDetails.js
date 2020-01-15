@@ -42,7 +42,7 @@ import F8Button from "../../common/F8Button";
 import ActionsOverlay from "../../common/ActionsOverlay";
 import F8ScrollingHeader from "../../common/F8ScrollingHeader";
 import MapView from "../../common/MapView";
-import Carousel from "../../common/Carousel";
+// import Carousel from "../../common/Carousel";
 
 /* constants ================================================================ */
 
@@ -77,7 +77,7 @@ const F8DemoDetails = React.createClass({
         >
           {this.renderHeading(demo)}
           {this.renderDescription(demo.description)}
-          {this.renderMap(map)}
+          {/* {this.renderMap(map)} */}
           {this.renderLinksSection(demo.links)}
         </ScrollView>
         {this.renderActions(demo.booking)}

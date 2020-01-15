@@ -98,7 +98,7 @@ class F8VideoPlayer extends React.Component {
   }
 
   playVideo = _ => {
-    F8Analytics.logEvent("Video Started", 1, { id: this.props.id });
+    // F8Analytics.logEvent("Video Started", 1, { id: this.props.id });
     VideoPlayer.showVideoPlayer(this.props.source);
   };
 }
@@ -135,11 +135,11 @@ videoPlayer.__cards__ = define => {
   define("Default", _ => (
     <F8VideoPlayer
       videoSource={{
-        uri: "https://s3-us-west-2.amazonaws.com/f8-dev/test_video_2.mp4"
+        uri: "http://vfx.mtime.cn/Video/2019/02/04/mp4/190204084208765161.mp4"
       }}
       backgroundImage={{
         uri:
-          "https://scontent-atl3-1.xx.fbcdn.net/v/t15.0-10/p526x395/12402416_10153638704483553_1401883252_n.jpg?oh=fee763691545a10645d5cd868a221135&oe=58DC9BC9"
+          "http://mmbiz.qpic.cn/mmbiz/4Akmg7ibPD0k2kvft3uHK1hAOhbIq8gMlNsS6mvnFjlL0geQMRaNVx3pXaMcwa3Z9vhp2RicRsA4baGicjMS89pGQ/640?wx_fmt=jpeg"
       }}
     />
   ));
@@ -148,11 +148,11 @@ videoPlayer.__cards__ = define => {
     <F8VideoPlayer
       autoplay={true}
       videoSource={{
-        uri: "https://s3-us-west-2.amazonaws.com/f8-dev/test_video_2.mp4"
+        uri: "http://vfx.mtime.cn/Video/2019/02/04/mp4/190204084208765161.mp4"
       }}
       backgroundImage={{
         uri:
-          "https://scontent-atl3-1.xx.fbcdn.net/v/t15.0-10/p526x395/12402416_10153638704483553_1401883252_n.jpg?oh=fee763691545a10645d5cd868a221135&oe=58DC9BC9"
+          "http://mmbiz.qpic.cn/mmbiz/4Akmg7ibPD0k2kvft3uHK1hAOhbIq8gMlNsS6mvnFjlL0geQMRaNVx3pXaMcwa3Z9vhp2RicRsA4baGicjMS89pGQ/640?wx_fmt=jpeg"
       }}
     />
   ));

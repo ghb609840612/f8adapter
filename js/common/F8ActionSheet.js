@@ -30,7 +30,7 @@ import { Text } from "./F8Text";
 import StyleSheet from "./F8StyleSheet";
 import F8Colors from "./F8Colors";
 import F8Button from "./F8Button";
-import Hitbox from "Hitbox";
+import Hitbox from "./Hitbox";
 
 /* constants ================================================================ */
 const GRADIENT_HEIGHT = 220,

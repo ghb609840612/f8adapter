@@ -30,7 +30,7 @@ const PropTypesR = React.PropTypes;
 
 const F8PageControl = React.createClass({
   propTypes: {
-    style: PropTypesR.style,
+    // style: PropTypesR.style,
     count: PropTypes.number.isRequired,
     selectedIndex: PropTypes.number.isRequired
   },

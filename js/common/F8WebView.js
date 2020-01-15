@@ -378,7 +378,7 @@ const styles = StyleSheet.create({
 
 const webView = F8WebView;
 webView.__cards__ = define => {
-  define("Default", _ => <F8WebView url="https://fbf8.com" />);
+  define("Default", _ => <F8WebView url="https://www.baidu.com/" backgroundColor= "#ff0000" />);
 };
 
 /* exports ================================================================== */

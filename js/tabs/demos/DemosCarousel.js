@@ -98,23 +98,25 @@ class DemosCarousel extends React.Component {
     return (
       <F8DemoDetails
         navigator={this.props.navigator}
+        key = {"key" + index}
         demo={this.props.allDemos[index]}
       />
     );
   }
 
   componentDidMount() {
-    this.track(this.state.selectedIndex);
+    // this.track(this.state.selectedIndex);
   }
 
   handleIndexChange(selectedIndex: number) {
-    this.track(selectedIndex);
+    // this.track(selectedIndex);
     this.setState({ selectedIndex });
   }
 
   track(index: number) {
     const { id } = this.props.allDemos[index];
-    F8Analytics.logEvent("View Demo", 1, { id });
+    console.log("F8Analytics",F8Analytics);
+    F8Analytics.logEvent("View Demo", 1,  id);
   }
 }
 

@@ -22,7 +22,7 @@
 "use strict";
 
 import React from "react";
-import F8Colors from "../../common/F8Colors";
+import F8Colors from "../common/F8Colors";
 import { Image, Text, View, StyleSheet } from "react-native";
 
 import type { Session } from "../reducers/sessions";

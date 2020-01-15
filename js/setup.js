@@ -32,6 +32,7 @@ import { Provider } from "react-redux";
 // Components
 import { Text, AsyncStorage } from "react-native";
 import F8App from "./F8App";
+import Playground from "./Playground";
 import LaunchScreen from "./common/LaunchScreen";
 
 // Config
@@ -82,6 +83,7 @@ function setup(): ReactClass<{}> {
       return (
         <Provider store={this.state.store}>
           <F8App />
+          {/* <Playground /> */}
         </Provider>
       );
     }

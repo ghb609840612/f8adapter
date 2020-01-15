@@ -36,8 +36,18 @@ class Playground extends React.Component {
     const define = (name: string, render: Function) => {
       content.push(<Example key={name} render={render} />);
     };
-    // const Module = require('F8PageControl');
-    const Module = require("F8Header");
+     const Module = require('./common/PlayButton');
+    //  const Module = require('./common/MessengerModal');
+    //  const Module = require('./common/LaunchScreen');
+    // const Module = require('./common/F8WebView');  //网址无法展示
+    // const Module = require('./common/F8Toast');
+    // const Module = require('./common/F8PageControl');
+    // const Module = require('./common/F8Button');
+    // const Module = require('./common/F8BackgroundRepeat');
+    // const Module = require('./common/F8ActionSheet');
+    // const Module = require('./common/ActionsOverlay');
+    // const Module = require('./video/F8VideoPlayer');  // 视频无法播放
+    // const Module = require('./common/F8Header');
     // const Module = require('./tabs/schedule/AddToScheduleButton');
     // const Module = require('./rating/Header');
     // $FlowFixMe: doesn't understand static
