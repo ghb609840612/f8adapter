@@ -1,7 +1,7 @@
 {
-  "name": "2017-f8-graphql-server",
+  "name": "2020-f8-graphql-server",
   "version": "1.4.0",
-  "description": "GraphQL API Server for F8 2017",
+  "description": "GraphQL API Server for F8 2020",
   "scripts": {
     "build": "babel src --out-dir lib --copy-files",
     "start": "PARSE_URL=http://localhost:1337/parse babel-node src/index.js"

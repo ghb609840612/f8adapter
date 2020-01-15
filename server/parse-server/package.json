@@ -1,7 +1,7 @@
 {
-  "name": "2017-f8-parse-server",
+  "name": "2020-f8-parse-server",
   "version": "1.4.0",
-  "description": "Parse API Server for F8 2017",
+  "description": "Parse API Server for F8 2020",
   "scripts": {
     "build": "babel cloud --out-dir cloud-lib --copy-files"
   },

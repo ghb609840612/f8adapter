@@ -1,6 +1,6 @@
 {
-  "appId": "oss-f8-app-2017",
-  "masterKey": "oss-f8-app-2017-mk",
+  "appId": "oss-f8-app-2020",
+  "masterKey": "oss-f8-app-2020-mk",
   "databaseURI": "mongodb://mongo/dev",
   "cloud": "cloud-lib/index.js"
 }
